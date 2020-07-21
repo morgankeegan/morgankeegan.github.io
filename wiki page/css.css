@@ -41,7 +41,9 @@ ul {
     overflow: hidden;
     background-color: #333;
   }
-
+.grey-text{
+  color:  #111;
+}
   .float-right {
     float: left;
     width: 300;
