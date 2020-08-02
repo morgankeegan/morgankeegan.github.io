@@ -7,6 +7,7 @@ ul {
     margin-left: 0;
     margin-right: 0;
     padding-left: 40px;
+    float:center;
   }
   
   p{
@@ -69,3 +70,34 @@ ul {
     ul.topnav li.right, 
     ul.topnav li {float: none;}
   }
+    /* Zoom hover Code */
+   * {
+      box-sizing: border-box;
+    }
+    
+    .zoom {
+      transition: transform .2s;
+      margin: 0 auto;
+    }
+    
+    .zoom:hover {
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Safari 3-8 */
+      transform: scale(1.5); 
+    }
+    /*Button*/
+    .btn {
+      background-color: DodgerBlue;
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      cursor: pointer;
+      font-size: 20px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      
+    }
+    
+    /* Darker background on mouse-over */
+    .btn:hover {
+      background-color: RoyalBlue;
+    }
