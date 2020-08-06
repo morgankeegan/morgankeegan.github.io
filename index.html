@@ -26,14 +26,20 @@ img{
           
 
     <iframe class="float-left" src="iFrame/iFrame.html" width="300" height="600" allign="left"></iframe>
-    
+
+    <script type="text/javascript" src="js/redirection-mobile.js"></script><script type="text/javascript">// <![CDATA[
+      SA.redirection_mobile ({
+      mobile_url : "google.com",
+      });
+      
+     // ]]></script>
+
     <script>
     function ohNo() {
       alert("ADMINISTRATER PASSWORD DETECTED! ALLOWING ACCESS TO SERVER MAINFRAME");
     }
-      if (window.clientWidth < 800) {
-    document.location="small.html";
-    }
+
+
 
     function setCookie(cname,cvalue,exdays) {
   var d = new Date();
