@@ -13,6 +13,7 @@ img{
     </style>
   </head>
   <body>
+    <body onload="checkCookie()"></body>
        <ul class="topnav">
         <li><a class="active" href="index.html" title="The wikipedia home page">Home</a></li>
         <li><a href="MobilePages\MobileHomePage.html" title="Mobile accessable version">Mobile</a> </li>
@@ -27,10 +28,45 @@ img{
     <iframe class="float-left" src="iFrame/iFrame.html" width="300" height="600" allign="left"></iframe>
     
     <script>
-      function ohNo() {
-  alert("ADMINISTRATER PASSWORD DETECTED! ALLOWING ACCESS TO SERVER MAINFRAME");
+    function ohNo() {
+      alert("ADMINISTRATER PASSWORD DETECTED! ALLOWING ACCESS TO SERVER MAINFRAME");
+    }
+
+    function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-    </script>
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+    </script> 
     <h1> test </h1>
   </body>
 </html>
