@@ -31,6 +31,9 @@ img{
     function ohNo() {
       alert("ADMINISTRATER PASSWORD DETECTED! ALLOWING ACCESS TO SERVER MAINFRAME");
     }
+      if (window.clientWidth < 800) {
+    document.location="small.html";
+    }
 
     function setCookie(cname,cvalue,exdays) {
   var d = new Date();
