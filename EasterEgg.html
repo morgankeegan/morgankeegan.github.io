@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wiki main page</title>
+    <link rel="stylesheet" href="../css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+img{
+  float:right;
+  width:128px;
+  height:128px;
+   }
+    </style>
+  </head>
+  <body>
+       <ul class="topnav">
+        <li><a href="../index.html" title="The wikipedia home page">Home</a></li>
+        <li><a href="../MobilePages\MobileHomePage.html" title="Mobile accessable version">Mobile</a> </li>
+        <li><a class="active" href="EasterEgg.html" title="Easter Egg">Secret!</a></li>
+        <li class="right"><img src="../WikiImages/logo.jpeg" style="width:75px; height:40px;"></a></li>
+      </ul>
+
+    <iframe id="sidebar"
+    src="../iFrame/iFrame.html"
+    width="300"
+    height="600"
+    >
+
+    </iframe>
+<iframe src="https://hextris.io/"
+width="900"
+height="900">  
+</iframe>
+    <script type="text/javascript">
+      if (screen.width <= 699) {
+      document.location = "../MobilePages\MobileHomePage.html";
+      }
+      </script>
+
+  </body>
+</html>
