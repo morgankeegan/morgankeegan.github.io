@@ -31,6 +31,7 @@
 [[HELL NO! IM LEAVING!|bathroomLeave]]
 (set: $ConeMan to false)
 (set: $pipe to false)
+(set: $ConeManFeelings to false)
 {
 (track: &#39;Sad&#39;, &#39;loop&#39;, true)
 (track: &#39;Sad&#39;, &#39;playwhenpossible&#39;)
@@ -42,18 +43,36 @@ You look out into the tree line, a gravel raod in between you and it.
 &lt;img src=&quot;https://cdn.onlyinyourstate.com/wp-content/uploads/2015/09/stonyhollowroad.jpg&quot;&gt;
 [[Might as well go left on the road|leftRoad]]
 [[No wait! Right!|rightRoad]]
-(masteraudio: &#39;stopall&#39;)</tw-passagedata><tw-passagedata pid="4" name="coneManDoorOpen" tags="" position="320,31" size="100,100">You open the door, to see a man with... cones on his head, a stop sign next to him. he has his cone head in his arms in the fetal position. &quot;Please, great hero, just end me. Ive lost in battle. Isnt that enough agony?&quot;  he sobs slightly 
+(masteraudio: &#39;stopall&#39;)
+{
+(track: &#39;woods&#39;, &#39;loop&#39;, true)
+(track: &#39;woods&#39;, &#39;playwhenpossible&#39;)
+}</tw-passagedata><tw-passagedata pid="4" name="coneManDoorOpen" tags="" position="320,31" size="100,100">You open the door, to see a man with... cones on his head, a stop sign next to him. he has his cone head in his arms in the fetal position. &quot;Please, great hero, just end me. Ive lost in battle. Isnt that enough agony?&quot;  he sobs slightly 
 &lt;img src=&quot;https://i.redd.it/96vpa50zuviz.png&quot; width=&quot;900&quot; height=&quot;auto&quot; allign=&quot;left&quot;&gt;
 [[Id rather leave him alone...|bathroomLeave]]
 [[&quot;aw, come on pal, dont beat yourself up about it&quot;|plot]]
-(masteraudio: &#39;stopall&#39;)</tw-passagedata><tw-passagedata pid="5" name="plot" tags="" position="483,29" size="100,100">&quot;I was supposed to take out you, like I was all non brass. Now I am a exile, forever to be banished from my home!&quot;   he stops speaking, clearly distraught &quot;It was my sworn duty the Brass King! now i am but a failure, end me great warrior&quot;
+(masteraudio: &#39;stopall&#39;)
+{
+(track: &#39;sadConeMan&#39;, &#39;loop&#39;, true)
+(track: &#39;sadConeMan&#39;, &#39;playwhenpossible&#39;)
+}</tw-passagedata><tw-passagedata pid="5" name="plot" tags="" position="483,29" size="100,100">&quot;I was supposed to take out you, like I was all non brass. Now I am a exile, forever to be banished from my home!&quot;   he stops speaking, clearly distraught &quot;It was my sworn duty the Brass King! now i am but a failure, end me great warrior&quot;
 [[&quot;I don&#39;t remember beating you in battle, but hey, your wish dude&quot;  You kill him|noConeMan]]
 [[&quot;nonsense! You could join me!&quot;  you offer a kind hand to him|coneManJoins]]</tw-passagedata><tw-passagedata pid="6" name="noConeMan" tags="" position="219,181" size="100,100">You look around for a split second untill you see a pipe. Good enough, you think as you grab it. You turn back to the man with a cone, he looks up. you hesitate for a second, adn then swing, and swing, and swing, and swing again. The ground is covered in a giant pool of blood, growing as he whimpers and screams. it would be cruel to stop now, you cant... you have to keep going. you bash and bash and bash again untill it stops moving... it would be best to leave right about now
 (set: $pipe to true)
-[[You leave, why stay next to a body?|bathroomLeave]]</tw-passagedata><tw-passagedata pid="7" name="coneManJoins" tags="" position="483,184" size="100,100">He looks up, his cone emotionless, but you can imagine he looks relieved under there... somewhere  &quot;I am forever in your debt&quot;  he says as he knells at your feet &quot;Cone Reconnaissance unit #33474 at your service&quot;
+[[You leave, why stay next to a body?|bathroomLeave]]
+(masteraudio: &#39;stopall&#39;)</tw-passagedata><tw-passagedata pid="7" name="coneManJoins" tags="" position="484,184" size="100,100">He looks up, his cone emotionless, but you can imagine he looks relieved under there... somewhere  &quot;I am forever in your debt&quot;  he says as he knells at your feet &quot;Cone Reconnaissance unit #33474 at your service&quot;
 &quot;come on, on your feet, lets get out of here... while you explain to me who this &#39;Brass King&#39; is, mmm?&quot;  he gets up, and follows eagerly yammering on about this king
 [[I have a good feeling about this|bathroomLeaveGood]]
-(set: $ConeMan to true)</tw-passagedata><tw-passagedata pid="8" name="bathroomLeaveGood" tags="" position="166,309" size="100,100">&quot;The Brass King is&quot;  you catch yourself as you walk out of the bathroom &quot;was your leader?&quot;  you look out into the tree line, a gravel raod in between you and it. &quot;Most definiately, he lead us to the promised land, a land with as many replacement parts as we needed, a land of luxery so that we never had to worry or ration again.&quot;
+(set: $ConeMan to true)
+{
+(link: &#39;bathroomLeaveGood&#39;)[
+(track: &#39;sadConeMan&#39;, &#39;fadeout&#39;, 2)
+(track: &#39;woods&#39;, &#39;fadein&#39;, 2)
+(track: &#39;woods&#39;, &#39;loop&#39;, true)
+(track: &#39;woods&#39;, &#39;playwhenpossible&#39;)
+    (goto: &#39;bathroomLeaveGood&#39;)
+]
+}</tw-passagedata><tw-passagedata pid="8" name="bathroomLeaveGood" tags="" position="166,309" size="100,100">&quot;The Brass King is&quot;  you catch yourself as you walk out of the bathroom &quot;was your leader?&quot;  you look out into the tree line, a gravel raod in between you and it. &quot;Most definiately, he lead us to the promised land, a land with as many replacement parts as we needed, a land of luxery so that we never had to worry or ration again.&quot;
 &lt;img src=&quot;https://cdn.onlyinyourstate.com/wp-content/uploads/2015/09/stonyhollowroad.jpg&quot;&gt;
 &quot;huh?&quot;  you say  &quot;replacement part? You can take off the cone?&quot;  
 &quot;Most definiately not! That&#39;s asking for death!&quot;
@@ -63,7 +82,32 @@ You look out into the tree line, a gravel raod in between you and it.
 &quot;Yes it most certainly is, and we need it to live.&quot;
 a sudden wave of realisation, they must have invaded... &lt;i&gt;for the instraments&lt;/i&gt; &quot;huh&quot;  you say, not sure what to do. There isnt anything around, just you, him, and the road
 [[Might as well go left on the road|leftRoad]]
-[[No wait! Right!|rightRoad]]</tw-passagedata><tw-passagedata pid="9" name="leftRoad" tags="" position="48,483" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="rightRoad" tags="" position="184,481" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="hal.tracks" tags="" position="704,45" size="100,100">Sad: ./ass/Male-Soft-Crying.mp3</tw-passagedata><tw-passagedata pid="12" name="Thank you!" tags="" position="9,15" size="100,100">Thank you for playing my game! Click [[Here|Start]]to start!</tw-passagedata></tw-storydata>
+[[No wait! Right!|rightRoad]]
+[[&quot;Hey, can i ask some questions?&quot;|Questions]]</tw-passagedata><tw-passagedata pid="9" name="leftRoad" tags="" position="48,483" size="100,100">To Be Continued</tw-passagedata><tw-passagedata pid="10" name="rightRoad" tags="" position="184,481" size="100,100">To Be Continued</tw-passagedata><tw-passagedata pid="11" name="hal.tracks" tags="" position="717,20" size="100,100">Sad: ./ass/Male-Soft-Crying.mp3
+sadConeMan: ./ass/sadTuba.mp3
+woods: ./ass/WOODS.mp3</tw-passagedata><tw-passagedata pid="12" name="Thank you!" tags="" position="9,15" size="100,100">Thank you for playing my game! Please note this is ment to be played with sound &lt;i&gt;aaaaand&lt;/i&gt; in Google Chrome  or Safari. Click [[Here|Start]]to start!</tw-passagedata><tw-passagedata pid="13" name="Questions" tags="" position="431,326" size="100,100">&quot;Alright, what do you want to ask?&quot;  he looks at you with his cone head
+[[&quot;How did your kind get here&quot;]]
+[[&quot;What happened in that bathroom?&quot;]]
+[[&quot;Whats your &lt;i&gt;REAL&lt;/i&gt; name?&quot;]]
+[[&quot;I dont have any more questions man|bathroomLeaveGood]]
+&lt;b&gt;Author&#39;s note, if you have any more questions DM me and i will add it&lt;/b&gt;</tw-passagedata><tw-passagedata pid="14" name="&quot;How did your kind get here&quot;" tags="" position="693,469" size="100,100">&quot;The Arch Mage opened a portal to your world, to allow us to conquor it and take all of its valuable resorces&quot;
+&quot;Like what?&quot; you say inquisitively, your curious now
+&quot;Your &#39;instraments&#39; as you put it&quot;  he says, thinking for a minute  &quot;They are taboo to make where we come from, and hard to do if we did make them. Only the Arch Mage could make them, but not fast enough&quot;
+&quot;Huh&quot;
+[[&quot;Hey, can i ask some questions?&quot;|Questions]]
+[[&quot;Whats your &lt;i&gt;REAL&lt;/i&gt; name?&quot;]]
+[[&quot;What happened in that bathroom?&quot;]]</tw-passagedata><tw-passagedata pid="15" name="&quot;What happened in that bathroom?&quot;" tags="" position="836,329" size="100,100">&quot;Well it is quite simple, I attacked you and you beat me in ahnd to hand combat&quot;
+&lt;i&gt;I did?&lt;/i&gt;  you say with a very suprised face, youve never been the strongest
+&quot;Yes, rather swiftly&quot;  he says very matter of fact
+&quot;Ah&quot;
+[[&quot;How did your kind get here&quot;]]
+[[&quot;Hey, can i ask some questions?&quot;|Questions]]
+[[&quot;Whats your &lt;i&gt;REAL&lt;/i&gt; name?&quot;]]</tw-passagedata><tw-passagedata pid="16" name="&quot;Whats your &lt;i&gt;REAL&lt;/i&gt; name?&quot;" tags="" position="667,190" size="100,100">He looks at you, with what you  think is confusion &quot;I dont have one, do you?&quot;
+&quot;Yes, every human does&quot;  you say matter of fact. he puts his head down a little, you might have hurt his feelings 
+(set: $ConeManFeelings to true)
+[[&quot;How did your kind get here&quot;]]
+[[&quot;What happened in that bathroom?&quot;]]
+[[&quot;Hey, can i ask some questions?&quot;|Questions]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
