@@ -17,8 +17,9 @@ img{
        <ul class="topnav">
         <li><a class="active" href="index.html" title="The wikipedia home page">Home</a></li>
         <li><a href="MobilePages\MobileHomePage.html" title="Mobile accessable version">Mobile</a> </li>
-        <li class="grey-text"><a  href="TopBarPages\EasterEgg.html" title="Easter Egg"></a> </li>
+        <li class="grey-text"><a  href="TopBarPages\THe Tale OF the Brass.html" title="Easter Egg"></a> </li>
         <li class="right"><img src="WikiImages/logo.jpeg" usemap="#Rules" style="width:75px; height:40px;"></a></li>
+		<li> <a href = "mailto: nobbob90@gmail.com?subject = Suggestions For Your Site Sir! = My suggestions for the site are">Send Emails</a>
           <map name="Rules">
             <area shape="default" alt="UNSECURE WEB SERVER DISCOVERED!" href="rulesLawyer.html" onclick="ohNo()">
           </map>
@@ -26,13 +27,6 @@ img{
           
 
     <iframe class="float-left" src="iFrame/iFrame.html" width="300" height="600" allign="left"></iframe>
-
-    <script type="text/javascript" src="js/redirection-mobile.js"></script><script type="text/javascript">// <![CDATA[
-      SA.redirection_mobile ({
-      mobile_url : "google.com",
-      });
-      
-     // ]]></script>
 
     <script>
     function ohNo() {
@@ -67,15 +61,23 @@ function getCookie(cname) {
 function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
-    alert("Welcome again " + user);
+    alert("Welcome " + user);
   } else {
      user = prompt("Please enter your name:","");
+	 window.location.reload();
      if (user != "" && user != null) {
        setCookie("username", user, 30);
      }
   }
 }
-    </script> 
-    <h1> test </h1>
+window.onload = function(){
+var nameUser = user
+
+document.getElementById('output').innerHTML = nameUser;
+}
+    </script> 	
+
+    <h1>The Comprehensive Wiki!</h1>
+	<h3>We appologise for the state of the site, we are currently lacking content. If any viewers would like to attribure to the site please do not fret to click the email tag at the top of the page.<h3>
   </body>
 </html>
