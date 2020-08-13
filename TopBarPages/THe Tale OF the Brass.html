@@ -36,7 +36,7 @@ window.processInputElements = function () {
     });
 };</script><tw-passagedata pid="1" name="Start" tags="" position="29,174" size="100,100">&lt;h1&gt;Chapter One&lt;/h1&gt;
 
-You Wake up to water spraying you in the face, form a broken sink. It is ovious somthing happened here, but you don&#39;t remember. What you do know is that, your not alone. Somone in the last stall is, crying?
+You wake up to water spraying you in the face from a broken sink. It is obivous somthing happened here, but you don&#39;t remember. What you do know is that, your not alone. Somone in the last stall is, crying?
 [[investigate crying]]
 [[HELL NO! IM LEAVING!|bathroomLeave]]
 (set: $ConeMan to false)
@@ -51,16 +51,17 @@ You Wake up to water spraying you in the face, form a broken sink. It is ovious 
 (set: $inCarCatFight to false)
 (set: $crossbowPractice to false)
 (set: $workingCar to false)
+(set: $cat to false)
 {
 (track: &#39;Sad&#39;, &#39;loop&#39;, true)
 (track: &#39;Sad&#39;, &#39;playwhenpossible&#39;)
 }</tw-passagedata><tw-passagedata pid="2" name="investigate crying" tags="" position="199,31" size="100,100">You get up, wishing you werent so damm wet and walk over. A soft voice can be heard form within  &quot;I&#39;ve failed, im useless&quot;  he says softly, or you assume it is a he from the voice.
 [[He can stay undisturbed, im out!|bathroomLeave]]
-[[open the door to comfort him|coneManDoorOpen]]</tw-passagedata><tw-passagedata pid="3" name="bathroomLeave" tags="" position="37,308" size="100,100">(if: $pipe is false)[Whatever the hell that thign is creeps you the hell out, id rather get the hell out of dodge before it gets &lt;i&gt;mad.&lt;/i&gt;]
+[[open the door to comfort him|coneManDoorOpen]]</tw-passagedata><tw-passagedata pid="3" name="bathroomLeave" tags="" position="37,308" size="100,100">(if: $pipe is false)[Whatever the hell that thign is creeps you the hell out, id&#39;e rather get the hell out of dodge before it gets &lt;i&gt;mad.&lt;/i&gt;]
 (if: $pipe is true)[With that delt with, you leave. Not entirely sure &lt;i&gt;what&lt;/i&gt; it is, you hope there arent more like it.]
-You look out into the tree line, a gravel raod in between you and it.
+You look out into the tree line, a gravel road in between you and it.
 &lt;img src=&quot;https://cdn.onlyinyourstate.com/wp-content/uploads/2015/09/stonyhollowroad.jpg&quot;&gt;
-[[Might as well go left on the road|righ tRoad]]
+[[Might as well go left on the road.|righ tRoad]]
 [[No wait! Right!|righ tRoad]]
 (masteraudio: &#39;stopall&#39;)
 {
@@ -93,7 +94,7 @@ You look out into the tree line, a gravel raod in between you and it.
 (track: &#39;woods&#39;, &#39;playwhenpossible&#39;)
     (goto: &#39;bathroomLeaveGood&#39;)
 ]
-}</tw-passagedata><tw-passagedata pid="8" name="bathroomLeaveGood" tags="" position="221,304" size="100,100">&quot;The Brass King is&quot;  you catch yourself as you walk out of the bathroom &quot;was your leader?&quot;  you look out into the tree line, a gravel raod in between you and it. &quot;Most definiately, he lead us to the promised land, a land with as many replacement parts as we needed, a land of luxery so that we never had to worry or ration again.&quot;
+}</tw-passagedata><tw-passagedata pid="8" name="bathroomLeaveGood" tags="" position="241,310" size="100,100">&quot;The Brass King is&quot;  you catch yourself as you walk out of the bathroom &quot;was your leader?&quot;  you look out into the tree line, a gravel raod in between you and it. &quot;Most definiately, he lead us to the promised land, a land with as many replacement parts as we needed, a land of luxery so that we never had to worry or ration again.&quot;
 &lt;img src=&quot;https://cdn.onlyinyourstate.com/wp-content/uploads/2015/09/stonyhollowroad.jpg&quot;&gt;
 &quot;huh?&quot;  you say  &quot;replacement part? You can take off the cone?&quot;  
 &quot;Most definiately not! That&#39;s asking for death!&quot;
@@ -105,7 +106,7 @@ a sudden wave of realisation, they must have invaded... &lt;i&gt;for the instram
 [[Might as well go left on the road|righ tRoad]]
 [[No wait! Right!|righ tRoad]]
 [[&quot;Hey, can i ask some questions?&quot;|Questions]]</tw-passagedata><tw-passagedata pid="9" name="righ tRoad" tags="" position="115,459" size="100,100">You wander down the road (if: $ConeMan is true)[You idely talk to him, talking about anything to distract yourself from your acheing feet.] (if: $ConeMan is false)[You walk for hours down the dirt road, till your feet ache] They are really starting to hurt.
-Just as you ponder about stoping for a rest you see it, a gas station! maybe you can talk to the attendent to find out more! who knows, maybe even go home to... you have no idea.
+Just as you ponder about stoping for a rest you see it, a gas station! maybe you can talk to the attendent to find out more! Who knows, maybe even go home to... You have no idea.
 &lt;img src=&quot;https://kathleenhowell.com/wp-content/uploads/2010/07/old_gasstation.jpg&quot; width=&quot;900&quot; height=&quot;auto&quot; allign=&quot;left&quot;&gt;
 [[Go to the gas station|gas]]
 [[I&#39;ll skip this, I know better then that!|notGasStation]]</tw-passagedata><tw-passagedata pid="10" name="hal.tracks" tags="" position="1005,0" size="100,100">Sad: ./ass/Male-Soft-Crying.mp3
@@ -122,11 +123,11 @@ meow!: ./ass/Cat_Meowing_2-Mr_Smith-780889994.mp3</tw-passagedata><tw-passagedat
 Firefox foe some reason throws up &lt;i&gt;alot&lt;/i&gt; of errors, and does not display text properly, DO NOT USE IT!
 
 Click [[Here|userNameEnter]] to start!
-This is version 0.0.4 | aka &quot;I fixed a couple mistakes, and happen to work a little on the cat fight.&quot;
-This update fixed several empty passages told by NOAH! our beautiful playtester/human slave who tested this game for us, of his own will, thanks!
-This update also brought the cat fight! &lt;b&gt;WOOOOOO&lt;/b&gt;
+This is version 0.0.5 | aka &quot;The resident spell checker looked at my shit.&quot;
+This update fixed several germaitcal and spelling mistakes, as well as error, that poor error...
+This update also brought the cat fight to completion! &lt;b&gt;WOOOOOO&lt;/b&gt;
 
-Special note: This game may work on mobile, i have no idea. This seems to work best with a cromeium browser, so if you dare use mobile, use Crome (or potentially safari, i think they work too)
+Special note: This game &lt;b&gt;works&lt;/b&gt; on mobile. This seems to work best with a cromeium browser, so if you dare use mobile, use Chrome (or potentially safari, i think they work too)
 If you have a script disabler (most notably noScript) the game will nto work! turn it off!
 
 if you see any errors, tell me personally on discord and i will fix them
@@ -139,7 +140,7 @@ Demonic#3314
 [[What was your life, before here, like?|homeLife?]]
 [[&quot;I dont have any more questions man|bathroomLeaveGood]]
 [[you mentioned barbarians...|barbarian?]]
-&lt;b&gt;Author&#39;s note, if you have any more questions DM me and i will add it&lt;/b&gt;</tw-passagedata><tw-passagedata pid="13" name="&quot;How did your kind get here&quot;" tags="" position="444,384" size="100,100">&quot;The Arch Mage opened a portal to your world, to allow us to conquor it and take all of its valuable resorces&quot;
+&lt;b&gt;Author&#39;s note, if you have any more questions DM me and i will add it&lt;/b&gt;</tw-passagedata><tw-passagedata pid="13" name="&quot;How did your kind get here&quot;" tags="" position="445,382" size="100,100">&quot;The Arch Mage opened a portal to your world, to allow us to conquor it and take all of its valuable resorces&quot;
 &quot;Like what?&quot; you say inquisitively, your curious now
 &quot;Your &#39;instraments&#39; as you put it&quot;  he says, thinking for a minute  &quot;They are taboo to make where we come from, and hard to do if we did make them. Only the Arch Mage could make them, but not fast enough&quot;
 &quot;Huh&quot;
@@ -147,7 +148,7 @@ Demonic#3314
 [[&quot;Whats your real name?&quot;]]
 [[&quot;What happened in that bathroom?&quot;]]
 [[What was your life, before here, like?|homeLife?]]
-[[you mentioned barbarians...|barbarian?]]</tw-passagedata><tw-passagedata pid="14" name="&quot;What happened in that bathroom?&quot;" tags="" position="691,247" size="100,100">&quot;Well it is quite simple, I attacked you and you beat me in ahnd to hand combat&quot;
+[[you mentioned barbarians...|barbarian?]]</tw-passagedata><tw-passagedata pid="14" name="&quot;What happened in that bathroom?&quot;" tags="" position="679,245" size="100,100">&quot;Well it is quite simple, I attacked you and you beat me in ahnd to hand combat&quot;
 &lt;i&gt;I did?&lt;/i&gt;  you say with a very suprised face, youve never been the strongest
 &quot;Yes, rather swiftly&quot;  he says very matter of fact
 &quot;Ah&quot;
@@ -155,7 +156,7 @@ Demonic#3314
 [[&quot;Hey, can i ask some questions?&quot;|Questions]]
 [[&quot;Whats your real name?&quot;]]
 [[What was your life, before here, like?|homeLife?]]
-[[you mentioned barbarians...|barbarian?]]</tw-passagedata><tw-passagedata pid="15" name="&quot;Whats your real name?&quot;" tags="" position="491,239" size="100,100">He looks at you, with what you  think is confusion &quot;I dont have one, do you?&quot;
+[[you mentioned barbarians...|barbarian?]]</tw-passagedata><tw-passagedata pid="15" name="&quot;Whats your real name?&quot;" tags="" position="468,242" size="100,100">He looks at you, with what you  think is confusion &quot;I dont have one, do you?&quot;
 &quot;Yes, every human does&quot;  you say matter of fact. he puts his head down a little, you might have hurt his feelings 
 (set: $ConeManFeelings to true)
 [[&quot;How did your kind get here&quot;]]
@@ -172,13 +173,13 @@ Demonic#3314
 [[&quot;I dont like the look of it.&quot;|argueGas]]
 [[&quot;I, don&#39;t know, we should go now that i think about it&quot;|gas]]
 ]
-(if: $ConeMan is false)[You think to yourself that it probably isnt the best idea to approch a gas station in whatever this is with (if: $pipe is true)[A bloody wepon] (if: $pipe is false)[no wepon to speak of, it may not be wise to bring a wepon into a place of businesss, but what if, somthing happened to them too.]]
+(if: $ConeMan is false)[You think to yourself that it probably isn’t the best idea to approch a gas station in whatever this is with (if: $pipe is true)[A bloody wepon] (if: $pipe is false)[no weapon to speak of. It may not be wise to bring a weapon into a place of businesss but, what if somthing happened to them too.]]
 [[Maybe I should go after all, there could be a car around back|gas]]
-[[Ill stay away|avoidGas]]</tw-passagedata><tw-passagedata pid="17" name="avoidGas" tags="" position="284,860" size="100,100">Something about it just makes you not want to go to it, maybe it looks off, or possibly it just doesnt catch your fancy. Maybe it wouldn&#39;t hurt to look out back?
+[[Ill stay away|avoidGas]]</tw-passagedata><tw-passagedata pid="17" name="avoidGas" tags="" position="284,860" size="100,100">Something about it just makes you not want to go to it. Maybe it looks off, or possibly it just doesn&#39;t catch your fancy. Maybe it wouldn&#39;t hurt to look out back?
 [[Look around the outside for somthing good|doneLootingGasStation?]]
 [[Hell no! that could be a trap too!|leaveGasStation]]</tw-passagedata><tw-passagedata pid="18" name="argueGas" tags="" position="257,619" size="100,100">&quot;Why not?&quot;  The cone man says, confused by the the tone of his voice &quot;That has never been a problum before has it?&quot;
 [[&quot;I don&#39;t know why, I just have the feeling&quot;|avoidGas]]
-[[&quot;No it has not, I guess we should go|gas]]</tw-passagedata><tw-passagedata pid="19" name="gas" tags="" position="130,862" size="100,100">You approch the gas station, smiling at the sight of civilization. you go up to the door (if: $ConeMan is true)[&quot;Wait&quot; your pal says, with concern in his voice. &quot;Look&quot; he says, pointing to a trip wire. &quot;if you had tripped that i think somthen bad would have happened&quot;
+[[&quot;No it has not, I guess we should go|gas]]</tw-passagedata><tw-passagedata pid="19" name="gas" tags="" position="130,862" size="100,100">You approch the gas station, smiling at the sight of civilization. You go up to the door (if: $ConeMan is true)[&quot;Wait&quot; your pal says, with concern in his voice. &quot;Look&quot; he says, pointing to a trip wire. &quot;if you had tripped that i think somthen bad would have happened&quot;
 &quot;Thanks!&quot;  you say with happined, steping over it
 [[I wonder what it could be...|gas2]] ]
 {
@@ -189,15 +190,15 @@ Demonic#3314
     (goto: &#39;deathGas&#39;)
 ]]
 }</tw-passagedata><tw-passagedata pid="20" name="gas2" tags="" position="127,1039" size="100,100">A crossbow with a single bolt in it, fully loded. How luckey of you to have a compainian point it out, that could have ended very
-&quot;You should have it, after all i have my &gt;i&gt;hefty&lt;/i&gt; stop sign&quot;  he syas, removing it from its high up position and giving it to you
+&quot;You should have it, after all i have my &lt;i&gt;hefty&lt;/i&gt; stop sign&quot;  he says, removing it from its high up position and giving it to you
 &lt;img src=&quot;.\ass\ruinedGasStation.jpg&quot; width=&quot;900&quot; height=&quot;auto&quot; allign=&quot;left&quot;&gt;
 You turn around and see the derelict gas station, obiously abandoned for a long time, oh why couldn&#39;t they have a nice cold drink for you on this hot day!
 (set: $crossbow to true)
 (set: $crossbowBolt to it + 1)
 [[loot the gas station|gastStationLoot]]
-[[Test out your fancy new crossbow!|crossbowTest]]</tw-passagedata><tw-passagedata pid="21" name="deathGas" tags="" position="487,586" size="100,100">you walk into the room and hear a &lt;i&gt;&lt;b&gt;click&lt;/b&gt;&lt;/i&gt; a crossbow bolt goes through your head, ending your life immediately
-[[Restart?|Thank you!]] 
-(masteraudio: &#39;fadeout&#39; 5)</tw-passagedata><tw-passagedata pid="22" name="gastStationLoot" tags="" position="52,1189" size="100,100">&quot;well, if no one is home we might as well loot what&#39;s left!&quot; you smile, &lt;i&gt;not paying for stuff is fun!&lt;/i&gt;
+[[Test out your fancy new crossbow!|crossbowTest]]</tw-passagedata><tw-passagedata pid="21" name="deathGas" tags="" position="487,586" size="100,100">You walk into the room and hear a &lt;i&gt;&lt;b&gt;click&lt;/b&gt;&lt;/i&gt; a crossbow bolt goes through your head, ending your life immediately
+[[Restart?|Start]] 
+(masteraudio: &#39;stopall&#39;)</tw-passagedata><tw-passagedata pid="22" name="gastStationLoot" tags="" position="52,1189" size="100,100">&quot;well, if no one is home we might as well loot what&#39;s left!&quot; you smile, &lt;i&gt;not paying for stuff is fun!&lt;/i&gt;
 [[I&#39;ll loot the shelfs|shelfLoot]]
 [[I&#39;ll Loot the cash register|cashMoney]]
 [[I&#39;ll Loot the staff room|staffRoomCarKeys]]
@@ -235,12 +236,12 @@ You take a closer look ontop of a high up shelf, car keys! thank goodness! now y
 [[I&#39;ll Loot the staff room|staffRoomCarKeys]]
 [[Looting isnt for me..|doneLootingGasStation?]]</tw-passagedata><tw-passagedata pid="29" name="doneLootingGasStation?" tags="" position="322,1287" size="100,100">Satisfied with your choices you leave the gas station, and look around back for anything, lo and behold a CAR!
 &lt;img src=&quot;./ass/carGasStation.jpg&quot; width=&quot;900&quot; height=&quot;auto&quot; allign=&quot;left&quot;&gt;
-It appers to be in prestine condition, and lived in, or... was, at one point. 
+It appers to be in prestine condition, and lived in, or... It was, at one point. 
 (if: $ConeMan is true)[
 &quot;Ah yes, a mechaincal horse.&quot; he syas with a smug voice, hands on his hip.
 &quot;car&quot;  you kindly say, more of a reminder
 &quot;It is a car horse!&quot;  he declares, your probably not changing his mind soon]
-you go up to it, it appers to be in good conition
+You go up to it, it appers to be in good conition.
 (if: $carKeys is true)[[[Lets go inside|IntoCar]]]
 (if: $carkeys is false)[The car keys must be in the gas station (if: $ConeMan is true)(if: $crossbow is false)[[[Go back Inside!|gas]]](if: $crossbow is true)[[[go Back Inside|goBackInside]]]]
 (if: $ConeMan is false)[(link: &#39;They must be in the gas station!&#39;)[
@@ -314,6 +315,7 @@ You go back to the car, with the filled can and fill her up! beconing your frien
 -Keegan from the past]
 (elseif: &quot;Noah&quot; is in $userName or &quot;noah&quot; is in $userName)[Thanks tetris MASTER for playing this, means the world. &lt;i&gt;and feel free to creteque the plot a little, it heeeelps&lt;/i&gt;]
 (elseif: &quot;Mark&quot; is in $userName or &quot;mark&quot; is in $userName)[Thanks for playing man, may you have more fun then i had programing this easter egg code (it was fuuuuun)]
+(elseif: &quot;Will&quot; is in $userName or &quot;will&quot; is in $userName)[thanks for playing so much Will! I appreciate it]
 (elseif: &quot;0&quot; is in $userName or &quot;username&quot; is in $userName)[Could have at least put in a username]
 (else:)[Thank you so much]
 [[Start]]</tw-passagedata><tw-passagedata pid="39" name="deathCarSleep" tags="" position="863,203" size="100,100">It&#39;s because you never heard the TUBA CAT EAT YOU ALIVE!
@@ -323,11 +325,13 @@ You go back to the car, with the filled can and fill her up! beconing your frien
 (if: $inCarCatFight is true)[You hear the floorbords of the car move, and move some more. The floor is growling at you
 [[FUCK THIS! IM GETTING OUT OF HERE!|catFight]]
 [[this is my car, you can&#39;t take it away form me! i don&#39;t care if the car starts to speak at me!|catFightDeathCar]] ]
-(else:) The nearby car starts to growl and hiss, wyrming with &lt;i&gt;something&lt;/i&gt; inside. The metal starst to bend at the top, like it is about to rupture!
+(else:) The nearby car starts to growl and hiss, wriggling with &lt;i&gt;something&lt;/i&gt; inside. The metal starst to bend at the top, like it is about to rupture!
 (if: $ConeMan is true)[&quot;that doesnt sound good&quot;
 &quot;No kidding&quot;]
 [[Prepare for the worst|catFight]]
-[[run like the coward that wants to live|runCatFight]]</tw-passagedata><tw-passagedata pid="41" name="catFight" tags="" position="1556,154" size="100,100">The roof of the car ruptures into a fury of brass and fur, in what can only be discribed of as a furry explosion of fury and &lt;i&gt;meowing&lt;/i&gt; and &lt;i&gt;growling&lt;/i&gt;
+[[Run like the coward that wants to live|runCatFight]]
+(set: $cat to true)</tw-passagedata><tw-passagedata pid="41" name="catFight" tags="" position="1556,154" size="100,100">The roof of the car ruptures into a fury of brass and fur, in what can only be discribed of as a furry explosion of fury and &lt;i&gt;meowing&lt;/i&gt; and &lt;i&gt;growling&lt;/i&gt;
+&lt;img src=&quot;catPhoto&quot; width=&quot;auto&quot; height=&quot;auto&quot; allign=&quot;left&quot;&gt;
 The cat looks at you with, intent. You don&#39;t know what this intent is as it runs twards you in a rush, on its hind legs, playing a bands worth of music out of one tuba. You have very little time to react
 (if: $ConeMan is true)[your compartreate redies his sign to defend you, if need be]
 (if: $pipe is true)[{
@@ -375,11 +379,60 @@ The cat looks at you with, intent. You don&#39;t know what this intent is as it 
 (track: &#39;catBoss2&#39;, &#39;loop&#39;, true)
     (goto: &#39;catBossGetsPet&#39;)
 ]
-}</tw-passagedata><tw-passagedata pid="42" name="catFightDeathCar" tags="" position="1157,163" size="100,100">the car &lt;b&gt;EXPLODES with a tuba playing cat&lt;/b&gt; who promptly eats your neck vishously while playing epic music!
-[[dammit, why is that cat so powerful!|Start]]
-(masteraudio: &#39;fadeout&#39; 5)</tw-passagedata><tw-passagedata pid="43" name="runCatFight" tags="" position="1384,144" size="100,100">Thank you for playing this far! this is where i give up for the night and go to bed, but here are the links to go back to the start, or to the start of the cat boss fight!
-[[The cat boss fight!|catBoss]]
-[[Start!|Thank you!]]</tw-passagedata><tw-passagedata pid="44" name="homeLife?" tags="" position="570,484" size="100,100">&quot;What was home like? y&#39;know, before all of this?&quot; you look at him with ponderous eyes, it could be anything!
+}</tw-passagedata><tw-passagedata pid="42" name="catFightDeathCar" tags="" position="1157,282" size="100,100">the car &lt;b&gt;EXPLODES with a tuba playing cat&lt;/b&gt; who promptly eats your neck vishously while playing epic music!
+[[Start again?|Start]]
+[[Start at chapter 2?|catBoss]]
+(masteraudio: &#39;stopall&#39;)
+(if: $crossbow is true)[(if: $crossbowBolt &lt; 0)[(set: $crossbowBolt to 1)]]</tw-passagedata><tw-passagedata pid="43" name="runCatFight" tags="" position="1396,152" size="100,100">The roof of the car ruptures into a fury of brass and fur, in what can only be discribed of as a furry explosion of fury and &lt;i&gt;meowing&lt;/i&gt; and &lt;i&gt;growling&lt;/i&gt;
+It starts to move at you!
+&lt;img src=&quot;catPhoto&quot; width=&quot;900&quot; height=&quot;auto&quot; allign=&quot;left&quot;&gt;
+The cat sems to be moving faster then you! what will you do!
+(if: $pipe is true)[{
+(link: &#39;&quot;here batter batter swing!&quot;&#39;)[
+(track: &#39;baseBall&#39;, &#39;loop&#39;, false)
+(track: &#39;catBoss1&#39;, &#39;fadeout&#39;, 5)
+(track: &#39;catBoss2&#39;, &#39;fadein&#39;, 5)
+(track: &#39;catBoss2&#39;, &#39;loop&#39;, true)
+    (goto: &#39;catBossPipe&#39;)
+]
+}]
+(if: $crossbow is true)[(if: $crossbowBolt &lt; 0)[(if: $crossbowPractice is true)[ {
+(link: &#39;You aim a well placed shot, and fire!&#39;)[
+(track: &#39;click&#39;, &#39;loop&#39;, false)
+(track: &#39;catBoss1&#39;, &#39;fadeout&#39;, 5)
+(track: &#39;catBoss2&#39;, &#39;fadein&#39;, 5)
+(track: &#39;catBoss2&#39;, &#39;loop&#39;, true)
+    (goto: &#39;catBossCrossbowHit&#39;)
+]
+} ]
+(if: $crossbowPractice is false)[{
+(link: &#39;You aim a hastely aimed shot, and fire!&#39;)[
+(track: &#39;click&#39;, &#39;loop&#39;, false)
+(track: &#39;catBoss1&#39;, &#39;fadeout&#39;, 5)
+(track: &#39;catBoss2&#39;, &#39;fadein&#39;, 5)
+(track: &#39;catBoss2&#39;, &#39;loop&#39;, true)
+    (goto: &#39;catBossCrossbowMiss&#39;)
+]
+} ]
+(if: $crossbowBolt &gt; 0)[you realise that, you have a crossbow, but no bolt! what a ueless realisation!]]
+(if: $crossbow is false)[(if: $ConeMan is true)[he readies his stop sign, to defend you,] the cat slows down, and meows as it rubs your leg {
+(link: &#39;well now I have to pet the little fella&#39;)[
+(track: &#39;meow!&#39;, &#39;loop&#39;, false)
+(track: &#39;catBoss1&#39;, &#39;fadeout&#39;, 5)
+(track: &#39;catBoss2&#39;, &#39;fadein&#39;, 5)
+(track: &#39;catBoss2&#39;, &#39;loop&#39;, true)
+    (goto: &#39;catBossGetsPet&#39;)
+]
+}]]
+{
+(link: &#39;&quot;I would rather die then harm a little cat! Ill pet you!&quot;&#39;)[
+(track: &#39;meow!&#39;, &#39;loop&#39;, false)
+(track: &#39;catBoss1&#39;, &#39;fadeout&#39;, 5)
+(track: &#39;catBoss2&#39;, &#39;fadein&#39;, 5)
+(track: &#39;catBoss2&#39;, &#39;loop&#39;, true)
+    (goto: &#39;catBossGetsPet&#39;)
+]
+}</tw-passagedata><tw-passagedata pid="44" name="homeLife?" tags="" position="570,484" size="100,100">&quot;What was home like? y&#39;know, before all of this?&quot; you look at him with ponderous eyes, it could be anything!
 &quot;In the land beyond yours, we lived in relitive prosparity, playing instraments with glee and happiness. I for one was not blessed with one, so I protected them by becoming a officer of the law. Then one day, the Brass King came on and made a speach about how, we were not prosperous, our mage, the soul maker of instraments, was aging, and loosing power. In order to survive we would have to find another way, so our mage in his last act of magic opened a portal here&quot;
 You look at him with suprise &quot;wow, uh...&quot;
 &quot;but to answer your question...&quot;  he says with relief to move on from that &quot;It was very nice, we had all the food, adiquate defenses form the barbarians, and many instraments, untill recently. I even became a licenced knight of the land, but thats in the past...&quot;  he sounds downtrodden at the last part.
@@ -397,43 +450,42 @@ You don&#39;t think asking him more questions on this topic would be wise...
 [[&quot;Whats your real name?&quot;]]
 [[What was your life, before here, like?|homeLife?]]
 [[&quot;Hey, can i ask some questions?&quot;|Questions]]
-*this question was brought to you by NOAH!</tw-passagedata><tw-passagedata pid="46" name="catBossPipe" tags="" position="1663,292" size="100,100">Thank you for playing this far! this is where i give up for the night and go to bed, but here are the links to go back to the start, or to the start of the cat boss fight!
-{
-(link: &#39;Start of the cat boss fight&#39;)[
+*this question was brought to you by NOAH!</tw-passagedata><tw-passagedata pid="46" name="catBossPipe" tags="" position="1563,296" size="100,100">You wallup the cat with the pipe, as it yowls in pain, it recoling at the touch of the pipe... it does&#39;t seem to be in that good of condition
+[[I always hated cats because i&#39;m a monster|deadCatBoss]]
 (track: &#39;catBoss2&#39;, &#39;fadeout&#39;, 5)
-(track: &#39;catBoss1&#39;, &#39;fadein&#39;, 5)
-(track: &#39;catBoss1&#39;, &#39;loop&#39;, true)
-    (goto: &#39;catBoss&#39;)
-]
-}
-[[Start!|Thank you!]]</tw-passagedata><tw-passagedata pid="47" name="catBossCrossbowHit" tags="" position="1559,291" size="100,100">Thank you for playing this far! this is where i give up for the night and go to bed, but here are the links to go back to the start, or to the start of the cat boss fight!
-{
-(link: &#39;Start of the cat boss fight&#39;)[
+(track: &#39;woods&#39;, &#39;fadein&#39;, 5)
+(track: &#39;woods&#39;, &#39;loop&#39;, true)</tw-passagedata><tw-passagedata pid="47" name="catBossCrossbowHit" tags="" position="1157,60" size="100,100">The crossbow enters the cat, and it yowls in pain. It buts its lips on its tuba and blows a mind shattering &lt;i&gt;&lt;b&gt;BWOOOOOSH&lt;/b&gt;&lt;/i&gt;, rattling your core... and your skull, ending you
+I woonder why it didnt do that when it ruptured from the car...
+(masteraudio: &#39;stopall&#39;)
+[[Start again?|Start]]
+[[Start at chapter 2?|catBoss]]
+(if: $crossbow is true)[(if: $crossbowBolt &lt; 0)[(set: $crossbowBolt to 1)]]</tw-passagedata><tw-passagedata pid="48" name="catBossCrossbowMiss" tags="" position="1156,180" size="100,100">You launch the crossbow bolt just past the cat, into his tuba, and iwht one swift &lt;i&gt;&lt;b&gt;BWOOOOOSH&lt;/b&gt;&lt;/i&gt;  it comes back at you, into your chest. 
+(if: $ConeMan is true)[your friend and ally, stunned, turns his attention form the cat, in a fatal mistake. the cat eats him alive!]
+Your eyes close for the last time as the cat moves to snack on your barely cold body!
+(masteraudio: &#39;stopall&#39;)
+[[Start again?|Start]]
+[[Start at chapter 2?|catBoss]]
+(if: $crossbow is true)[(if: $crossbowBolt &lt; 0)[(set: $crossbowBolt to 1)]]</tw-passagedata><tw-passagedata pid="49" name="catBossGetsPet" tags="" position="1397,270" size="100,100">you lean down and scratch the cat&#39;s chinny chin chin, and it smiles in return, blowing a happy little toot of its tuba, it seems to be happy!
+ {
+(link: &#39;&quot;You like that little guy?&quot;&#39;)[
 (track: &#39;catBoss2&#39;, &#39;fadeout&#39;, 5)
-(track: &#39;catBoss1&#39;, &#39;fadein&#39;, 5)
-(track: &#39;catBoss1&#39;, &#39;loop&#39;, true)
-    (goto: &#39;catBoss&#39;)
+(track: &#39;woods&#39;, &#39;fadein&#39;, 5)
+(track: &#39;woods&#39;, &#39;loop&#39;, true)
+    (goto: &#39;theCatTalks&#39;)
 ]
-}
-[[Start!|Thank you!]]</tw-passagedata><tw-passagedata pid="48" name="catBossCrossbowMiss" tags="" position="1448,289" size="100,100">Thank you for playing this far! this is where i give up for the night and go to bed, but here are the links to go back to the start, or to the start of the cat boss fight!
-{
-(link: &#39;Start of the cat boss fight&#39;)[
-(track: &#39;catBoss2&#39;, &#39;fadeout&#39;, 5)
-(track: &#39;catBoss1&#39;, &#39;fadein&#39;, 5)
-(track: &#39;catBoss1&#39;, &#39;loop&#39;, true)
-    (goto: &#39;catBoss&#39;)
-]
-}
-[[Start!|Thank you!]]</tw-passagedata><tw-passagedata pid="49" name="catBossGetsPet" tags="" position="1764,293" size="100,100">Thank you for playing this far! this is where i give up for the night and go to bed, but here are the links to go back to the start, or to the start of the cat boss fight!
-{
-(link: &#39;Start of the cat boss fight&#39;)[
-(track: &#39;catBoss2&#39;, &#39;fadeout&#39;, 5)
-(track: &#39;catBoss1&#39;, &#39;fadein&#39;, 5)
-(track: &#39;catBoss1&#39;, &#39;loop&#39;, true)
-    (goto: &#39;catBoss&#39;)
-]
-}
-[[Start!|Thank you!]]</tw-passagedata></tw-storydata>
+} </tw-passagedata><tw-passagedata pid="50" name="deadCatBoss" tags="" position="1599,543" size="100,100">You wallup the cat several times, reducing it to nothing but a bloody pulp and a tuba... not like you care, you horrible human! $userName &lt;b&gt;IS EVIL!&lt;/b&gt;
+(set: $cat to false)
+[[Back on the trail we go, to figure out where the hell I am!|back on the trail]]</tw-passagedata><tw-passagedata pid="51" name="theCatTalks" tags="" position="1402,392" size="100,100">&quot;Sí, estoy bastante feliz. Gracias por dar mis rasguños en la barbilla, me hace bastante feliz. Encontré esta tuba de aquí y soplé en ella y me pareció bastante entretenido, ¿no crees? Decidí llevarlo conmigo a todas partes como un juguete pequeño y divertido para tocar. Uno pensaría que muchos más estarían felices de ver a una criatura tan esponjosa jugando con un instrumento tan agradable y limpio, pero ninguno parece estarlo. realmente irrita a uno, ¿no dirías buen amigo?&quot;
+&quot;uhhhh...&quot;  you say, you don&#39;t know how to speak spanish at all, you now wish you had taken it over that german class you took and failed. WHY COULDNT THE CAT SPEAK GERMAN
+&quot;No puedes hablar el idioma de los gatos, ¿verdad? sería muy útil si pudiera, pero entiendo que si no puede&quot;
+[[&quot;Your cute, wanna tag along?&quot;|CatJoin]]
+[[&quot;I don&#39;t think your, a cat. I think we shouldnt travel togeather...|catNotJoin]]</tw-passagedata><tw-passagedata pid="52" name="CatJoin" tags="" position="1329,543" size="100,100">&quot;Gracias amigo&quot;  it says as it purrs lovingly into your hand, purring and smiling the best a tuba playing cat can
+[[&quot;we all should go back on the road... huh|back on the trail]]</tw-passagedata><tw-passagedata pid="53" name="catNotJoin" tags="" position="1477,545" size="100,100">The cat, looking dissapointed, scoots off into the distance
+&quot;¡Por supuesto que nadie quería tenerme como mascota! Soy un gato, y los ratones solo son buenos las primeras veces. ¡Además los asusto a todos! ¿Por qué tienes que ser tan malvado, ser humano sin corazón?&quot;
+[[I still dont speak spanish|back on the trail]]
+(set: $cat to false)</tw-passagedata><tw-passagedata pid="54" name="back on the trail" tags="" position="1448,810" size="100,100">Thank you many times for playing! If you have any suggestions please tell me!
+[[Start of Ch1|Start]]
+[[Start of Ch2|catBoss]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
