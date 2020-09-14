@@ -498,13 +498,14 @@ Your eyes close for the last time as the cat moves to snack on your barely cold 
 [[&quot;we all should go back on the road... huh|back on the trail]]</tw-passagedata><tw-passagedata pid="53" name="catNotJoin" tags="" position="1477,545" size="100,100">The cat, looking dissapointed, scoots off into the distance
 &quot;¡Por supuesto que nadie quería tenerme como mascota! Soy un gato, y los ratones solo son buenos las primeras veces. ¡Además los asusto a todos! ¿Por qué tienes que ser tan malvado, ser humano sin corazón?&quot;
 [[I still dont speak spanish|back on the trail]]
-(set: $cat to false)</tw-passagedata><tw-passagedata pid="54" name="back on the trail" tags="" position="1448,810" size="100,100">You turn back to leaving this, rather looted and ruined place. 
-(if: $workingCar is true)[You turn your head to the working car, or rather, the hole in the car. Climbing into it you turn the keys, and by some miricle it works. &quot;Well it seems your horse has recieved some damage&quot;  he says with a smile in his voice, you can tell he is just messing with you at this point.](if: $ConeMan is true)[ &quot;We should leave, im starting to get rather hungry.&quot;
-You rub your stomach, so are you. &quot;I agree, maybe we can go into town and get some.&quot; you are hopeful, maybe to much so, but its all you have at this point.(else:)[You rub your stomach, your rather hungry. you haven&#39;t eaten allll day. You definiately know food isn&#39;t here, maybe down the road?]]
-(if: $workingCar is true)[[[I should drive down the road, nothing left here!|driveRoad]]
-(else:)[We should walk down the road, not like anything is left.(if: $ConeMan is false)[Or is there somthing in that gas station? [[Gas station time!|deathGas]]]
-[[Walk down the road.]]]
-]
+(set: $cat to false)</tw-passagedata><tw-passagedata pid="54" name="back on the trail" tags="" position="1449,809" size="100,100">(set: $workingCar to true)
+You turn back to leaving this, rather looted and ruined place. 
+(if: $workingCar is true)[You turn your head to the working car, or rather, the hole in the car. Climbing into it you turn the keys, and by some miricle it works. &quot;Well it seems your horse has recieved some damage&quot;  he says with a smile in his voice, you can tell he is just messing with you at this point. &quot;We should leave, im starting to get rather hungry.&quot;
+You rub your stomach, so are you. &quot;I agree, maybe we can go into town and get some.&quot; you are hopeful, maybe to much so, but its all you have at this point.](if: $workingCar is false)[You rub your stomach, your rather hungry. you haven&#39;t eaten allll day. You definiately know food isn&#39;t here, maybe down the road?]
+(if: $workingCar is true)[[[I should drive down the road, nothing left here!|driveRoad]]]
+We should walk down the road, not like anything is left.(if: $ConeMan is false)[Or is there somthing in that gas station? [[Gas station time!|deathGas]]]
+[[Walk down the road.]]
+
 (if: $workingCar is true)[
 (set: $inv to $inv - (a: &quot;car, undamaged&quot;))
 (set: $inv to $inv + (a: &quot;car, damaged&quot;))
@@ -573,6 +574,7 @@ you check your pocket and see you only have (print: $money)$ in your pocket
 [[crossbow bolts, 7$|crossbowbolts]]
 (track: &#39;merch&#39;, &#39;fadein&#39;, 10)
 (track: &#39;merch&#39;, &#39;loop&#39;, true)
+[[Hey, can I ask you somthing?|askshop]]
 NOTE THAT THIS SHOP IS CURRENTLY UNDER CONSTRUCTION, AND WILL BE EXPANDED UPON LATER, TELL KEEGAN YOUR IMPUT!
 &lt;!--Wait for user imput--&gt;
 NOTE THERE IS NO MORE CONTENT FOR NOW! THIS IS THE END OF THE GAME THUSLY!
@@ -598,7 +600,7 @@ You have (print: $money)$ in your pocket.
 (if: $crossbowboltsvaluestore is true)[(if: $money &gt; 10)[(set: $crossbowBolt to it + 1)(set: $money -=10) You recieved the cat food, in a little tin can. &quot;Thank you for your purchice, valued customer! (set: $crossbowamount -= 1) ](else:)[ You dont have the required funds for this item.]]
 (if: $crossbowboltsvaluestore is false)[This item is no longer in stock]
 (else:)[There is none left.]]
-[[Back to shop|shop1]]</tw-passagedata></tw-storydata>
+[[Back to shop|shop1]]</tw-passagedata><tw-passagedata pid="71" name="askshop" tags="" position="1452,1799" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
