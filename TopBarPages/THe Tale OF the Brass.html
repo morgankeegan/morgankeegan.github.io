@@ -562,7 +562,7 @@ You see, a one story building with lites on in a dark city, in your natural curi
 (set: $flairamount to 10)
 (set: $flairbuy to true)
 (set: $crossbowamount to 10)
-(set: $crossbowboltsvaluestore to true</tw-passagedata><tw-passagedata pid="64" name="shop1" tags="" position="1484,1612" size="100,100">
+(set: $crossbowboltsvaluestore to true)</tw-passagedata><tw-passagedata pid="64" name="shop1" tags="" position="1484,1612" size="100,100">
 &quot;Greetigns!&quot;  you hear form inside the building, as you wnter a warm &lt;i&gt;woosh&lt;/i&gt; of air hitting you in the face, makign you feel at home &quot;What can I get you?&quot;
 you check your pocket and see you only have (print: $money)$ in your pocket
 &lt;img src=&quot;tubaMerch.jpg&quot; width=&quot;900&quot; height=&quot;auto&quot; allign=&quot;left&quot;&gt;
@@ -582,20 +582,20 @@ NOTE THERE IS NO MORE CONTENT FOR NOW! THIS IS THE END OF THE GAME THUSLY!
 You have (print: $money)$ in your pocket.
 &lt;hr&gt;
 (link-goto: &quot;Return&quot;, (history:)&#39;s last) 
-</tw-passagedata><tw-passagedata pid="66" name="Inv. footer" tags="footer" position="1857,1801" size="100,100">&lt;hr&gt;(if: (passage:)&#39;s name is &quot;inventory&quot;)[&lt;!--Do nothing--&gt;](else-if: (passage:)&#39;s tags contains &quot;donotshowinventory&quot;)[&lt;!--Do nothing--&gt;](else:)[Check [[inventory]].]</tw-passagedata><tw-passagedata pid="67" name="catfood" tags="donotshowinventory" position="997,1592" size="100,100">(if: $catfoodbuyamount &gt; 1)[
-(if: $catfoodbuy is true)[(if: $money &gt; 10)[(set: $inv to $inv + (a: &quot;cat food&quot;)) You recieved the cat food, in a little tin can. &quot;Thank you for your purchice, valued customer! (set: $catfoodamountleft -= 1) ](else:)[ You dont have the required funds for this item.]]
+</tw-passagedata><tw-passagedata pid="66" name="Inv. footer" tags="footer" position="1857,1801" size="100,100">&lt;hr&gt;(if: (passage:)&#39;s name is &quot;inventory&quot;)[&lt;!--Do nothing--&gt;](else-if: (passage:)&#39;s tags contains &quot;donotshowinventory&quot;)[&lt;!--Do nothing--&gt;](else:)[Check [[inventory]].]</tw-passagedata><tw-passagedata pid="67" name="catfood" tags="donotshowinventory" position="1000,1596" size="100,100">(if: $catfoodbuyamount &gt; 1)[
+(if: $catfoodbuy is true)[(if: $money &gt; 10)[(set: $inv to $inv + (a: &quot;cat food&quot;))(set: $money -=10) You recieved the cat food, in a little tin can. &quot;Thank you for your purchice, valued customer! (set: $catfoodamountleft -= 1) ](else:)[ You dont have the required funds for this item.]]
 (if: $catfoodbuy is false)[This item is no longer in stock]
 (else:)[There is none left.]]
-[[Back to shop|shop1]]</tw-passagedata><tw-passagedata pid="68" name="MREfood" tags="donotshowinventory" position="998,1480" size="100,100">(if: $MREfoodamountleft &gt; 1)[
-(if: $MREfoodbuy is true)[(if: $money &gt; 20)[(set: $inv to $inv + (a: &quot;MRE, a Meal Ready to Eat&quot;)) You recieved the cat food, in a little tin can. &quot;Thank you for your purchice, valued customer! (set: $MREfoodamountleft -= 1) ](else:)[ You dont have the required funds for this item.]]
+[[Back to shop|shop1]]</tw-passagedata><tw-passagedata pid="68" name="MREfood" tags="donotshowinventory" position="1000,1493" size="100,100">(if: $MREfoodamountleft &gt; 1)[
+(if: $MREfoodbuy is true)[(if: $money &gt; 20)[(set: $inv to $inv + (a: &quot;MRE, a Meal Ready to Eat&quot;))(set: $money -=10) You recieved the cat food, in a little tin can. &quot;Thank you for your purchice, valued customer! (set: $MREfoodamountleft -= 1) ](else:)[ You dont have the required funds for this item.]]
 (if: $MREfoodbuy is false)[This item is no longer in stock]
 (else:)[There is none left.]]
-[[Back to shop|shop1]]</tw-passagedata><tw-passagedata pid="69" name="roadflair" tags="donotshowinventory" position="1000,1375" size="100,100">(if: $flairamount &gt; 1)[
-(if: $flairbuy is true)[(if: $money &gt; 20)[(set: $inv to $inv + (a: &quot;MRE, a Meal Ready to Eat&quot;)) You recieved the cat food, in a little tin can. &quot;Thank you for your purchice, valued customer! (set: $flairamount -= 1) ](else:)[ You dont have the required funds for this item.]]
-(if: $$flairbuy is false)[This item is no longer in stock]
+[[Back to shop|shop1]]</tw-passagedata><tw-passagedata pid="69" name="roadflair" tags="donotshowinventory" position="1001,1391" size="100,100">(if: $flairamount &gt; 1)[
+(if: $flairbuy is true)[(if: $money &gt; 20)[(set: $inv to $inv + (a: &quot;road flair&quot;))(set: $money -=20) You recieved the cat food, in a little tin can. &quot;Thank you for your purchice, valued customer! (set: $flairamount -= 1) ](else:)[ You dont have the required funds for this item.]]
+(if: $flairbuy is false)[This item is no longer in stock]
 (else:)[There is none left.]]
-[[Back to shop|shop1]]</tw-passagedata><tw-passagedata pid="70" name="crossbowbolts" tags="donotshowinventory" position="994,1701" size="100,100">(if: $crossbowamount &gt; 1)[
-(if: $crossbowboltsvaluestore is true)[(if: $money &gt; 10)[(set: $inv to $inv + (a: &quot;cat food&quot;)) You recieved the cat food, in a little tin can. &quot;Thank you for your purchice, valued customer! (set: $crossbowamount -= 1) ](else:)[ You dont have the required funds for this item.]]
+[[Back to shop|shop1]]</tw-passagedata><tw-passagedata pid="70" name="crossbowbolts" tags="donotshowinventory" position="999,1700" size="100,100">(if: $crossbowamount &gt; 1)[
+(if: $crossbowboltsvaluestore is true)[(if: $money &gt; 10)[(set: $crossbowBolt to it + 1)(set: $money -=10) You recieved the cat food, in a little tin can. &quot;Thank you for your purchice, valued customer! (set: $crossbowamount -= 1) ](else:)[ You dont have the required funds for this item.]]
 (if: $crossbowboltsvaluestore is false)[This item is no longer in stock]
 (else:)[There is none left.]]
 [[Back to shop|shop1]]</tw-passagedata></tw-storydata>
