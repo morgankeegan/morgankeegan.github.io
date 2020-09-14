@@ -53,6 +53,9 @@ You wake up to water spraying you in the face from a broken sink. It is obivous 
 (set: $workingCar to false)
 (set: $cat to false)
 (set: $inv to (a:))
+(set: $moneycashreg to true)
+(set: $gascanlootshelf to true)
+(set: $carkeyslootshelf to false)
 {
 (masteraudio: &#39;stopall&#39;)
 (track: &#39;Sad&#39;, &#39;loop&#39;, true)
@@ -228,19 +231,26 @@ You turn around and see the derelict gas station, obiously abandoned for a long 
 [[I&#39;ll Loot the staff room|staffRoomCarKeys]]
 [[I&#39;ll loot the back room!|storageRoom]]
 [[Looting isnt for me..|doneLootingGasStation?]]
-(set: $inv to $inv + (a: &quot;gas can&quot;)) </tw-passagedata><tw-passagedata pid="26" name="cashMoney" tags="" position="697,1238" size="100,100">You go up to the cash register and open it, five 50 doller bills lie in wait for you! woooo! free money!
+
+(if: $gascanlootshelf is true)[
+(set: $inv to $inv + (a: &quot;gas can&quot;)) 
+(set: $gascanlootshelf to false)]</tw-passagedata><tw-passagedata pid="26" name="cashMoney" tags="" position="697,1238" size="100,100">You go up to the cash register and open it, five 50 doller bills lie in wait for you! woooo! free money!
 [[I&#39;ll loot the shelfs|shelfLoot]]
 [[I&#39;ll Loot the staff room|staffRoomCarKeys]]
 [[I&#39;ll loot the back room!|storageRoom]]
 [[Looting isnt for me..|doneLootingGasStation?]]
+(if: $moneycashreg is true)[
 (set: $money to 250)
-(track: &#39;money&#39;, &#39;loop&#39;, false)</tw-passagedata><tw-passagedata pid="27" name="staffRoomCarKeys" tags="" position="696,1101" size="100,100">You walk into the staff room, looking around the disty place. It seems no one has been back here, you guess its because nothing of worth is here... &lt;i&gt;wait.&lt;/i&gt;
+(set: $moneycashreg to false)
+(track: &#39;money&#39;, &#39;loop&#39;, false)]</tw-passagedata><tw-passagedata pid="27" name="staffRoomCarKeys" tags="" position="696,1101" size="100,100">You walk into the staff room, looking around the disty place. It seems no one has been back here, you guess its because nothing of worth is here... &lt;i&gt;wait.&lt;/i&gt;
 You take a closer look ontop of a high up shelf, car keys! thank goodness! now you not only have a place to sleep, but wheels! That is, if you can find them!
 [[I&#39;ll loot the shelfs|shelfLoot]]
 [[I&#39;ll Loot the cash register|cashMoney]]
 [[I&#39;ll loot the back room!|storageRoom]]
 [[Looting isnt for me..|doneLootingGasStation?]]
-(set: $inv to $inv + (a: &quot;car keys&quot;)) </tw-passagedata><tw-passagedata pid="28" name="storageRoom" tags="" position="691,983" size="100,100">You walk into the storage room, however it seems many have had the same idea, it is empty. Oh well!
+(if: $carkeyslootshelf is true)[
+(set: $inv to $inv + (a: &quot;car keys&quot;)) 
+(set: $carkeyslootshelf to false)]</tw-passagedata><tw-passagedata pid="28" name="storageRoom" tags="" position="691,983" size="100,100">You walk into the storage room, however it seems many have had the same idea, it is empty. Oh well!
 [[I&#39;ll loot the shelfs|shelfLoot]]
 [[I&#39;ll Loot the cash register|cashMoney]]
 [[I&#39;ll Loot the staff room|staffRoomCarKeys]]
@@ -252,13 +262,13 @@ It appers to be in prestine condition, and lived in, or... It was, at one point.
 &quot;car&quot;  you kindly say, more of a reminder
 &quot;It is a car horse!&quot;  he declares, your probably not changing his mind soon]
 You go up to it, it appers to be in good conition.
-(if: $inv contains &quot;car keys&quot;)[[[Lets go inside|IntoCar]]
-(else:)[The car keys must be in the gas station (if: $ConeMan is true)(if: $crossbow is false)[[[Go back Inside!|gas]]](if: $inv contains &quot;crossbow&quot;)[[[go Back Inside|goBackInside]]]]]
+(if: $inv contains &quot;car keys&quot;)[[[Lets go inside|IntoCar]]]
+(else:)[The car keys must be in the gas station (if: $ConeMan is true)[(if: $crossbow is false)[[[Go back Inside!|gas]]](if: $inv contains &quot;crossbow&quot;)[[[go Back Inside|goBackInside]]]]]
 (if: $ConeMan is false)[(link: &#39;They must be in the gas station!&#39;)[
 (track: &#39;woods&#39;, &#39;fadeout&#39;, 5)
 (track: &#39;click&#39;, &#39;loop&#39;, false)
-    (goto: &#39;deathGas&#39;)
-[[Still not going in there|noCar]]]]</tw-passagedata><tw-passagedata pid="30" name="IntoCar" tags="" position="82,1342" size="100,100">You go into the car, and look about, if somone left thier car keys for you to find, might as well take it for yourself!
+    (goto: &#39;deathGas&#39;)]
+[[Still not going in there|noCar]]]</tw-passagedata><tw-passagedata pid="30" name="IntoCar" tags="" position="82,1342" size="100,100">You go into the car, and look about, if somone left thier car keys for you to find, might as well take it for yourself!
 you put the keys intot he car, turn them, and the engine cranks to life, the engine purring like a kitten.
 the gas light however is, on E
 (if: $inv contains &quot;gas can&quot;)[[[I should get some gas for this bad boy!|gasPump]] [[On second Thought, I hate cars. Screw cars|noCarConeMan]] 
@@ -574,7 +584,7 @@ you check your pocket and see you only have (print: $money)$ in your pocket
 [[crossbow bolts, 7$|crossbowbolts]]
 (track: &#39;merch&#39;, &#39;fadein&#39;, 10)
 (track: &#39;merch&#39;, &#39;loop&#39;, true)
-[[Hey, can I ask you somthing?|askshop]]
+
 NOTE THAT THIS SHOP IS CURRENTLY UNDER CONSTRUCTION, AND WILL BE EXPANDED UPON LATER, TELL KEEGAN YOUR IMPUT!
 &lt;!--Wait for user imput--&gt;
 NOTE THERE IS NO MORE CONTENT FOR NOW! THIS IS THE END OF THE GAME THUSLY!
