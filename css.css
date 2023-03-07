@@ -1,4 +1,3 @@
-
 ul {
     display: block;
     list-style-type: disc;
@@ -11,18 +10,23 @@ ul {
   }
   
   p{
-      font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif; text-align: center;
+  }
+
+  h1{
+    font-family: 'Times New Roman', Times, serif; text-align: center;
   }
 
   h2{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif; text-align: center;
   }
-
+  h3{
+    font-family: 'Times New Roman', Times, serif; text-align: center;
+  }
   img{
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 2px;
-    max-width: 50%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -46,58 +50,3 @@ ul {
 .grey-text{
   color:  #111;
 }
-.float-left {
-  float: left;
-  }
-  /* The code for the bar */
-  ul.topnav li {float: left;}
-  
-  ul.topnav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  ul.topnav li a:hover:not(.active) {background-color: #111;}
-  
-  ul.topnav li a.active {background-color: #26a32a;}
-  
-  ul.topnav li.right {float: right;}
-  
-  @media screen and (max-width: 800px) {
-    ul.topnav li.right, 
-    ul.topnav li {float: none;}
-  }
-    /* Zoom hover Code */
-   * {
-      box-sizing: border-box;
-    }
-    
-    .zoom {
-      transition: transform .2s;
-      margin: 0 auto;
-    }
-    
-    .zoom:hover {
-      -ms-transform: scale(1.5); /* IE 9 */
-      -webkit-transform: scale(1.5); /* Safari 3-8 */
-      transform: scale(1.5); 
-    }
-    /*Button*/
-    .btn {
-      background-color: DodgerBlue;
-      border: none;
-      color: white;
-      padding: 12px 30px;
-      cursor: pointer;
-      font-size: 20px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-      
-    }
-    
-    /* Darker background on mouse-over */
-    .btn:hover {
-      background-color: RoyalBlue;
-    }
